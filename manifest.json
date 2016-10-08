@@ -1,13 +1,18 @@
 {
-  "manifest_version": 2,
-  "name": "YouBlock",
-  "version": "0.1",
-  "content_scripts": [
-    {
-      "matches": [
-        "https://www.youtube.com/*"
-      ],
-      "js": ["ContentScript.js"]
-    }
-  ]
+    "manifest_version": 2,
+    "name": "YouBlock",
+    "version": "1.0",
+    "options_ui": {
+        "page": "options.html",
+        "chrome_style": true
+    },
+    "storage": {
+        "managed_schema": "schema.json"
+    },
+    "content_scripts": [{
+        "matches": [
+            "https://www.youtube.com/*"
+        ],
+        "js": ["ContentScript.js"]
+    }]
 }

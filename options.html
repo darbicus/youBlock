@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Test Extension Options</title>
+    <style>
+        list>div{
+            padding:2px;
+        }
+        .db {
+                display: block;
+    height: 16px;
+    opacity: .75;
+    width: 16px;
+            float: right;
+            background-image: url(X.png);
+        }
+        .db:hover{
+            opacity:1;
+            cursor: pointer;
+        }
+        
+        body: {
+            padding: 10px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="list.css">
+</head>
+
+<body>
+
+    Blocked Users:
+    <list id="namelist" mode="normal" role="list" tabindex="-1" inlineeditable="" class="settings-list" aria-activedescendant="">
+
+
+    </list>
+
+    <script src="options.js"></script>
+</body>
+
+</html>
