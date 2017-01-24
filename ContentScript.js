@@ -7,11 +7,11 @@
     });
     var listenForAllComments = function(e) {
         if (e.target.querySelector) {
-            var allcomments = e.target.querySelector('#all-comments');
+            var allcomments = e.target.querySelector('#item-list > yt-live-chat-item-list-renderer');
             if (allcomments) {
                 allcomments.addEventListener('DOMNodeInserted', function(e) {
-                    var flag = e.target.querySelector('button[data-action="flag"]'),
-                        author = e.target.querySelector('.author'),
+                    var flag = e.target.querySelector('ytd-menu-service-item-renderer'),
+                        author = e.target.querySelector('#author-name'),
                         authortext = author ? author.textContent.trim() : '';
                     if (flag && authortext) {
                         flag.addEventListener('click', function(f) {
